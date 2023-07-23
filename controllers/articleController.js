@@ -5,7 +5,7 @@ module.exports = {
     async index (req, res) {
         const articles = await Article.find({});
         res.render('index', {
-            title: 'Pug is Awesome',
+            title: 'Articles',
             articles: articles
         });
     },

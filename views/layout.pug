@@ -2,9 +2,23 @@ doctype html
 html
     head 
         title Knowledgebase
+        link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
     body 
-        block content
-        br
-        hr
-        footer
-            p Copyright &copy; 2023
+        nav.navbar.navbar-expand-lg.bg-body-tertiary.rounded(aria-label='Eleventh navbar example')
+            .container
+                a.navbar-brand(href='/articles') Knowlodgebase
+                button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarsExample09' aria-controls='navbarsExample09' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarsExample09.collapse.navbar-collapse
+                    ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                        li.nav-item
+                            a.nav-link.active(aria-current='page' href='/articles') Home
+                        li.nav-item
+                            a.nav-link(href='/articles/add') Adicionar Artigo
+        .container
+            block content
+            br
+            hr
+            footer
+                p Copyright &copy; 2023
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
