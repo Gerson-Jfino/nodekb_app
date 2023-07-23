@@ -3,3 +3,5 @@ block content
     h1= article.title
     p5 writen by #{article.author}
     p= article.body
+    hr
+    a.btn.btn-primary.px-3(href='/articles/edit/'+article._id) Edit

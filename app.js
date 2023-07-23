@@ -30,13 +30,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/articles', articlesRoutes);
 
 
-//Add view router
-app.get('/articles/add', (req, res) => {
-    res.render('store_article', {
-        title: 'Add article'
-    })
-});
-
 
 
 //Start server
