@@ -3,6 +3,7 @@ const db = require('./services/db');
 const bodyParser = require('body-parser');
 const path = require('path');
 const articleController = require('./controllers/articleController');
+const articlesRoutes = require('./routes/articlesRoutes')
 //init app
 const app = express();
 // Bring in Models
@@ -37,7 +38,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
     
     
 // });
-app.get('/', articleController.index);
+
+app.use('/articles', articlesRoutes);
+// app.get('/', articleController.index);
 
 //Add route
 app.get('/articles/add', (req, res) => {
@@ -47,7 +50,7 @@ app.get('/articles/add', (req, res) => {
 });
 
 // Add submit Post route
-app.post('/articles', articleController.store);
+// app.post('/articles', articleController.store);
 
 //Start server
 app.listen(3000, () => {
