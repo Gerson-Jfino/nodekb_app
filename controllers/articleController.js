@@ -30,7 +30,7 @@ module.exports = {
                 article: article
             });
         } catch (error) {
-            console.log(erroe);
+            console.log(error);
         }
     }
 }
