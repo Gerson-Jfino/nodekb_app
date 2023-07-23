@@ -21,5 +21,16 @@ module.exports = {
         } catch (error) {
             console.log(error);
         }
+    },
+    async show(req, res) {
+        const {id} = req.params;
+        try {
+            const article = await Article.findById(id);
+            return res.render('article', {
+                article: article
+            });
+        } catch (error) {
+            console.log(erroe);
+        }
     }
 }
