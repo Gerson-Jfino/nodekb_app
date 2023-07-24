@@ -13,6 +13,10 @@ npm install -g bower
 ```
 bower install bootstrap
 ```
+### install jquery
+```
+bower install jquery
+```
 
 ### Compiles and hot-reloads for development
 ```

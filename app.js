@@ -27,6 +27,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Seting static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', (req, res) => {
+    res.redirect('/articles')
+})
 app.use('/articles', articlesRoutes);
 
 
