@@ -12,5 +12,6 @@ router.get('/edit/:id', articleController.edit);
 //routes
 router.post('/', articleController.store);
 router.post('/edit/:id', articleController.update);
+router.delete('/:id', articleController.delete);
 
 module.exports = router;

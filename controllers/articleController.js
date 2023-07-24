@@ -38,6 +38,16 @@ module.exports = {
             console.log(error);
         }
     },
+    async delete(req, res) {
+        const {id} = req.params;
+        const query = {_id: id};
+        try {
+            await Article.findOneAndRemove(query);
+            res.send('Success');
+        } catch (error) {
+            console.log(error);
+        }
+    },
     // Views controllers
     async show(req, res) {
         const {id} = req.params;
