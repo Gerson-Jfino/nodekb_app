@@ -1,7 +1,8 @@
 const express = require('express');
-const db = require('./services/db');
 const bodyParser = require('body-parser');
 const path = require('path');
+const session = require('express-session')
+const db = require('./services/db');
 const articlesRoutes = require('./routes/articlesRoutes')
 //init app
 const app = express();
@@ -26,6 +27,14 @@ app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({ extended: false }));
 // Seting static folder
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Express session middleware
+app.set('trust proxy', 1) // trust first proxy
+app.use(session({
+  secret: 'keyboard cat',
+  resave: true,
+  saveUninitialized: true
+}));
 
 app.get('/', (req, res) => {
     res.redirect('/articles')
