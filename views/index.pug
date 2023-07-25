@@ -4,5 +4,6 @@ block content
     h1 #{title}
     ul.list-group.list-group-flush
         each article, i in articles
-            li.list-group-item 
-                a(href="/articles/" + article._id)= article.title 
+            li.list-group-item.border-0 
+                a(href="/articles/" + article._id)
+                    h6 #{article.title} 

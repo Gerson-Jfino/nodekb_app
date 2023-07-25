@@ -1,3 +1,10 @@
+#content {
+    margin-top: 25px;
+}
+.align-author {
+    margin-bottom: -10px;
+    font-size: 12px;
+}
 a { 
     color:rgb(0, 0, 0); 
     text-decoration: none;

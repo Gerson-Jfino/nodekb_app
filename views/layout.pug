@@ -4,7 +4,7 @@ html
         title Knowledgebase
         link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
         link(rel='stylesheet' href='/css/style.css')
-    body 
+    body.d-flex.flex-column.h-100 
         nav.navbar.navbar-expand-lg.navbar-dark.bg-dark(aria-label='Eleventh navbar example')
             .container
                 a.navbar-brand(href='/articles') Knowlodgebase
@@ -20,8 +20,9 @@ html
             block content
             br
             hr
-            footer
-                p Copyright &copy; 2023
+            footer.footer.mt-auto.py-3
+                #container
+                    span.text-body-secondary Knowlodgebase &copy; 2023
         script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
         script(src='/bower_components/jquery/dist/jquery.js')
         script(src='/js/main.js')
